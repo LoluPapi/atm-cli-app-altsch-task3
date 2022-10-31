@@ -54,7 +54,7 @@ func transaction() {
 		atm.Balance()
 		anotherTransaction()
 	case 3:
-		atm.Withdraw()
+		atm.withdraw()
 		anotherTransaction()
 	case 4:
 		atm.Deposit()
