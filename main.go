@@ -8,7 +8,7 @@ import (
 )
 
 func welcome() {
-	fmt.Println("**-**{ Welcome to the ATM CLI app!}**-**")
+	fmt.Println("**-**Welcome to the ATM CLI app!**-**")
 }
 
 func newLine(numberOfLines int) {
