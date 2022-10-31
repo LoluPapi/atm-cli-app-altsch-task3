@@ -4,8 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"atm/atmOperation"
-	//"github.com/lolupapi/atm-cli-app/atmOperation"
+	"github.com/lolupapi/atm-cli-app-altsch-task3/atm"
 )
 
 func welcome() {
@@ -49,16 +48,16 @@ func transaction() {
 
 	switch transactionNumber {
 	case 1:
-		atmOperation.ChangeSecretPin()
+		atm.ChangeSecretPin()
 		anotherTransaction()
 	case 2:
-		atmOperation.Balance()
+		atm.Balance()
 		anotherTransaction()
 	case 3:
-		atmOperation.Withdraw()
+		atm.Withdraw()
 		anotherTransaction()
 	case 4:
-		atmOperation.Deposit()
+		atm.Deposit()
 		anotherTransaction()
 	case 0:
 		endSession()
@@ -69,7 +68,7 @@ func transaction() {
 }
 
 func main() {
-	atmOperation.login()
+	atm.login()
 	welcome()
 	transaction()
 }

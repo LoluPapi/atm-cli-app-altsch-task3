@@ -16,7 +16,7 @@ func newLine(numberOfLines int) {
 	}
 }
 
-func Login() {
+func login() {
 	for {
 
 		if !VerifySecretPin(secretPin) {
@@ -36,16 +36,16 @@ func ChangeSecretPin() {
 		fmt.Scan(&new_pin)
 
 		if len(new_pin) != 4 {
-			fmt.Println("Pin should be 4 characters long")
+			fmt.Println("Your Pin should be 4 characters long")
 			continue
 		}
 		if new_pin == secretPin {
-			fmt.Println("You have entered your old pin, please entered a diffrent pin")
+			fmt.Println("You have entered your old pin, please entered a different pin")
 			continue
 		}
 
 		secretPin = new_pin
-		fmt.Println("Pin has been changed")
+		fmt.Println("Your Pin has been changed Succesfully")
 		break
 	}
 }
