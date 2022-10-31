@@ -6,7 +6,7 @@ This is an ATM CLI App
 ### To run this program
 
 ```bash
-go run 
+go run .
 ```
 
 ### The Welcome page is like this
