@@ -37,6 +37,7 @@ func transaction() {
 	fmt.Printf("2. Balance\n")
 	fmt.Printf("3. Withdraw\n")
 	fmt.Printf("4. Deposit\n\n")
+	fmt.Printf("Press 0 to exit\n\n")
 	newLine(1)
 
 	var transactionNumber int
@@ -54,7 +55,7 @@ func transaction() {
 		atm.Balance()
 		anotherTransaction()
 	case 3:
-		atm.withdraw()
+		atm.Withdraw()
 		anotherTransaction()
 	case 4:
 		atm.Deposit()
@@ -68,7 +69,7 @@ func transaction() {
 }
 
 func main() {
-	atm.login()
+	atm.Login()
 	welcome()
 	transaction()
 }

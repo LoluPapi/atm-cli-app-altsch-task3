@@ -16,7 +16,7 @@ func newLine(numberOfLines int) {
 	}
 }
 
-func login() {
+func Login() {
 	for {
 
 		if !VerifySecretPin(secretPin) {
@@ -40,7 +40,7 @@ func ChangeSecretPin() {
 			continue
 		}
 		if new_pin == secretPin {
-			fmt.Println("You have entered your old pin, please entered a different pin")
+			fmt.Println("You have entered your old pin, please enter a different pin")
 			continue
 		}
 
@@ -68,7 +68,7 @@ func Balance() {
 
 }
 
-func withdraw() {
+func Withdraw() {
 
 	fmt.Println("Withdraw money")
 
@@ -79,7 +79,7 @@ func withdraw() {
 	fmt.Printf("Enter amount: ")
 	fmt.Scan(&amount)
 	if amount < 5 {
-		fmt.Println("invalid amount, enter amount greater than 5 to be able to make a withdrawal")
+		fmt.Println("Invalid amount, enter amount greater than 5 to be able to make a withdrawal")
 		return
 	}
 
@@ -105,8 +105,8 @@ func Deposit() {
 		fmt.Println("You cannot deposit less than $0")
 		return
 	}
-	prev_balance := balance
+	old_balance := balance
 	balance += amount
 
-	fmt.Printf("Previous Balance: %.2f  USD,\nCurrent Balance: %.2f USD", prev_balance, balance)
+	fmt.Printf("Previous Balance: %.2f  USD,\nCurrent Balance: %.2f USD", old_balance, balance)
 }
